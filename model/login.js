@@ -7,7 +7,7 @@ module.exports = {
         if (err) {
           return callback(err, null);
         }
-        callback(null, results); // Return the result
+        callback(null, results); 
       });
     },
     createUser: (userData, callback) => {

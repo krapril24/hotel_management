@@ -3,7 +3,7 @@ const routes = express.Router();
 const loginmodel = require('../model/login');
 const xss = require('xss');
 
-// Example: Fetch data from MySQL
+
 routes.get('/users', (req, res) => {
     loginmodel.getAllUsers((err,users) =>{
         if (err) {

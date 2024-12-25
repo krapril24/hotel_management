@@ -32,12 +32,6 @@ fs.readdirSync(routesPath).forEach((file) => {
   }
 });
 
-// Set up a simple route
-app.get('/', (req, res) => {
-  res.send('Hello, Express!');
-});
-
-
 // Define the port to listen on
 
 app.listen(port, () => {
