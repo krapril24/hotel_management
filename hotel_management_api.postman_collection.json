@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "2444bc91-228d-4204-b19a-231b10e5b648",
+		"name": "hotel_management_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39309455"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/login/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "connect.sid=s%3AZAHz7jdc876j0-9DmnWUO04UtDTMzbU3.IMQwPNZk66dhKPHjsfMmE9G1smI0S16nmZeGtBRbZQE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sureshakr85@gmail.com\",\r\n    \"password\":\"Secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/login/login' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Cookie: connect.sid=s%3AZAHz7jdc876j0-9DmnWUO04UtDTMzbU3.IMQwPNZk66dhKPHjsfMmE9G1smI0S16nmZeGtBRbZQE' \\\r\n--data-raw '{\r\n    \"email\":\"sureshakr85@gmail.com\",\r\n    \"password\":\"Secret\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/hotels/getHotelsByCity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "connect.sid=s%3A7HC125mT19zz114rt9dQKp1U1kEfyGml.Pzcpjm2mwkiIrKH%2BKNvyzmQN%2F7iFq6FRcREScQawYrs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"city\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/getHotelsByCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"getHotelsByCity"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'http://localhost:3000/hotels/getHotelsByCity' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Cookie: connect.sid=s%3A7HC125mT19zz114rt9dQKp1U1kEfyGml.Pzcpjm2mwkiIrKH%2BKNvyzmQN%2F7iFq6FRcREScQawYrs' \\\r\n--data '{\r\n    \"city\":\"Bangalore\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/hotels/roombooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hotelName\" :\"Holiday Inn Bengaluru Racecourse\",\r\n    \"roomsCount\" : 3, \r\n    \"checkInTime\" : \"2024-12-26 11:30:00\", \r\n    \"checkOutTime\" : \"2024-12-28 16:00:00\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/roombooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"roombooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/hotels/getBookedRooms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerID\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/getBookedRooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"getBookedRooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/hotels/updateBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"booking_id\":2,\r\n    \"roomsCount\":1,\r\n    \"checkInTime\":\"2024-12-28 10:00:00\",\r\n    \"checkOutTime\":\"2024-12-29 23:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/updateBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"updateBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/hotels/cancelBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"booking_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/hotels/cancelBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"hotels",
+						"cancelBooking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
